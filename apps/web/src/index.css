@@ -9,6 +9,17 @@
   --color-text: #e1e1e1;
   --color-muted: #bcbcbc;
 
+  --text-subtitle: 31px;
+  --text-subtitle--line-height: 1.5;
+  --text-paragraph-lg: 22px;
+  --text-paragraph-lg--line-height: 1.5;
+  --text-paragraph: 18px;
+  --text-paragraph--line-height: 1.5;
+  --text-paragraph-sm: 15px;
+  --text-paragraph-sm--line-height: 1.5;
+  --text-label: 12.5px;
+  --text-label--line-height: 1.5;
+
   --font-sans: 'Prompt', ui-sans-serif, system-ui, sans-serif;
 }
 

@@ -2,10 +2,10 @@ import type { ComponentProps } from 'react'
 import { cx } from '../../../lib/cx'
 
 const variants = {
-  lead: 'text-2xl text-text',
-  body: 'text-base text-text',
-  small: 'text-sm text-text',
-  muted: 'text-base text-muted',
+  lead: 'text-paragraph-lg text-text',
+  body: 'text-paragraph text-text',
+  small: 'text-paragraph-sm text-text',
+  muted: 'text-paragraph text-muted',
 }
 
 type TextProps = ComponentProps<'p'> & {

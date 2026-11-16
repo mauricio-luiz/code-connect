@@ -22,4 +22,14 @@ describe('AuthFooterLink', () => {
     )
     expect(container.querySelector('[data-icon="clipboard"]')).toBeInTheDocument()
   })
+
+  it('supports the inline layout', () => {
+    const { container } = render(
+      <MemoryRouter>
+        <AuthFooterLink question="Já tem conta?" linkText="Faça seu login!" to="/login" layout="inline" />
+      </MemoryRouter>,
+    )
+    expect(container.firstElementChild).toHaveAttribute('data-layout', 'inline')
+    expect(container.firstElementChild).not.toHaveClass('flex-col')
+  })
 })

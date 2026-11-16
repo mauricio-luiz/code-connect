@@ -7,7 +7,7 @@ export function Divider({ children, className, ...props }: ComponentProps<'div'>
   return (
     <div
       role="separator"
-      className={cx('flex items-center gap-4 text-sm text-text', className)}
+      className={cx('flex items-center gap-4 text-paragraph-sm text-text', className)}
       {...props}
     >
       {line}

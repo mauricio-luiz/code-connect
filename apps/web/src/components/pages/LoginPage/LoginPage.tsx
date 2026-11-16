@@ -5,7 +5,7 @@ import { LoginForm } from '../../organisms/LoginForm'
 export function LoginPage() {
   return (
     <AuthTemplate
-      banner={{ src: '/banner-login.png', alt: 'Pessoa programando com o logo Code Connect' }}
+      banner={{ src: '/banner-login.png', alt: 'Pessoa programando em frente a telas com interfaces verdes', position: '50% center' }}
       title="Login"
       subtitle="Boas-vindas! Faça seu login."
       // TODO: integrar com a API de autenticação quando o endpoint existir.
