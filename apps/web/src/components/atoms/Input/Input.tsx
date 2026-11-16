@@ -5,7 +5,7 @@ export function Input({ className, ...props }: ComponentProps<'input'>) {
   return (
     <input
       className={cx(
-        'h-10 w-full rounded-sm bg-input px-4 text-sm text-bg placeholder:text-bg/70',
+        'w-full rounded-sm bg-input px-4 py-2 text-paragraph-sm text-surface placeholder:text-surface',
         'focus:outline-2 focus:outline-primary',
         className,
       )}

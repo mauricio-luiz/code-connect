@@ -3,7 +3,7 @@ import { cx } from '../../../lib/cx'
 import { Icon, type IconName } from '../Icon'
 
 const variants = {
-  primary: 'bg-primary text-bg hover:brightness-95',
+  primary: 'bg-primary text-symbol hover:brightness-95',
 }
 
 type ButtonProps = ComponentProps<'button'> & {
@@ -23,7 +23,7 @@ export function Button({
     <button
       type={type}
       className={cx(
-        'inline-flex h-13 w-full cursor-pointer items-center justify-center gap-2 rounded-sm text-lg font-semibold',
+        'inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg px-4 py-3 text-paragraph font-semibold',
         'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
         variants[variant],
         className,

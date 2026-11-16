@@ -8,6 +8,8 @@ type AuthFooterLinkProps = {
   linkText: string
   to: string
   icon?: IconName
+  /** `stacked`: pergunta acima do link, centralizado. `inline`: pergunta e link lado a lado. */
+  layout?: 'stacked' | 'inline'
   className?: string
 }
 
@@ -16,14 +18,24 @@ export function AuthFooterLink({
   linkText,
   to,
   icon,
+  layout = 'stacked',
   className,
 }: AuthFooterLinkProps) {
+  const inline = layout === 'inline'
+
   return (
-    <div className={cx('flex flex-col items-center gap-3', className)}>
-      <Text variant="small">{question}</Text>
+    <div
+      data-layout={layout}
+      className={cx(
+        'flex gap-2',
+        inline ? 'flex-wrap items-center' : 'flex-col items-center',
+        className,
+      )}
+    >
+      <Text variant={inline ? 'body' : 'small'}>{question}</Text>
       <TextLink to={to} variant="primary">
         {linkText}
-        {icon && <Icon name={icon} />}
+        {icon && <Icon name={icon} className="text-2xl" />}
       </TextLink>
     </div>
   )

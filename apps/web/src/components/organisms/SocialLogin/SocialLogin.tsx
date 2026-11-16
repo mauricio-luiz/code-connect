@@ -21,7 +21,7 @@ export function SocialLogin({
   className,
 }: SocialLoginProps) {
   return (
-    <div className={cx('flex flex-col items-center gap-3', className)}>
+    <div className={cx('flex flex-col items-center gap-2', className)}>
       <Divider className="w-full">{title}</Divider>
       <div className="flex gap-6">
         {providers.map(({ id, label, icon }) => (

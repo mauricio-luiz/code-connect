@@ -25,7 +25,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
         <FormField
           label="Email ou usuário"

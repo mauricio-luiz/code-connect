@@ -2,8 +2,8 @@ import { Link, type LinkProps } from 'react-router'
 import { cx } from '../../../lib/cx'
 
 const variants = {
-  underline: 'text-sm text-text underline',
-  primary: 'inline-flex items-center gap-2 text-lg text-primary',
+  underline: 'text-paragraph-sm text-text underline',
+  primary: 'inline-flex items-center gap-3 text-paragraph text-primary',
 }
 
 type TextLinkProps = LinkProps & {

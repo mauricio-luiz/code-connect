@@ -19,6 +19,16 @@ describe('AuthTemplate', () => {
     expect(screen.getByText('Rodapé')).toBeInTheDocument()
   })
 
+  it('overlays the logo on the banner and applies the crop position', () => {
+    render(
+      <AuthTemplate banner={{ ...banner, position: '56% center' }} title="t" subtitle="s">
+        x
+      </AuthTemplate>,
+    )
+    expect(screen.getByRole('img', { name: 'Code Connect' })).toBeInTheDocument()
+    expect(screen.getByAltText('Banner de teste')).toHaveAttribute('style', expect.stringContaining('56% center'))
+  })
+
   it('renders the decorative background symbols', () => {
     render(
       <AuthTemplate banner={banner} title="t" subtitle="s">

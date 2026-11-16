@@ -17,7 +17,7 @@ export function SocialLoginButton({
     <button
       type={type}
       className={cx(
-        'flex cursor-pointer flex-col items-center gap-1 text-xs text-text',
+        'flex cursor-pointer flex-col items-center gap-1 text-label text-text',
         'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary',
         className,
       )}
