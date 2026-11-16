@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 pnpm workspace (`apps/*`) with two independent apps and no shared packages:
 
-- `apps/api` — NestJS 12 backend (ESM, Vitest, oxlint with type-aware rules). Currently the default scaffold (`AppModule`, `AppController`, `AppService`); listens on `PORT` or 3000.
+- `apps/api` — NestJS 12 backend (ESM, Vitest, oxlint with type-aware rules). Endpoints: `POST /users` (signup), `POST /auth/tokens` (login, JWT), `GET /users/me` (Bearer). Auth via `@nestjs/authentication` (global guard, `@Public()` to opt out); users live in an in-memory array (`UsersRepository`, lost on restart). Swagger UI at `/docs`. Needs `JWT_SECRET` (>=32 bytes; copy `.env.example` to `.env`). Listens on `PORT` or 3000.
 - `apps/web` — React 19 + Vite 8 frontend (TypeScript, oxlint). Tailwind CSS 4, React Router; currently has the Login page (`/login`).
 
 ## Commands
